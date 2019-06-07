@@ -43,4 +43,6 @@
     <string name="respond">Respond</string>
     <string name="general_forum">General Forum</string>
     <string name="pro_forum">Business Forum</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
 </resources>

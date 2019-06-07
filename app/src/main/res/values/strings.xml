@@ -50,4 +50,6 @@
     <string name="general_forum">觀眾討論區</string>
     <string name="pro_forum">影評人討論區</string>
     <string name="respond">回應</string>
+    <string name="next">下一頁</string>
+    <string name="back">上一頁</string>
 </resources>

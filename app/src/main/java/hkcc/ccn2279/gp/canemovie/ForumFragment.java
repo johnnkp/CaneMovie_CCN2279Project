@@ -22,6 +22,8 @@ import java.util.List;
 import hkcc.ccn2279.gp.canemovie.xml.Discussion;
 import hkcc.ccn2279.gp.canemovie.xml.DomParseXML;
 
+import static hkcc.ccn2279.gp.canemovie.MainActivity.fragmentManager;
+
 public class ForumFragment extends Fragment {
     // https://givemepass.blogspot.com/2015/10/tablayout.html
     private TabLayout mTabs;
@@ -85,13 +87,9 @@ public class ForumFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getContext(), "Item " + position + " is clicked.", Toast.LENGTH_SHORT).show();
-                }
-            });
-            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    Toast.makeText(getContext(), "Item " + position + " is long clicked.", Toast.LENGTH_SHORT).show();
-                    return true;
+                    // Display the fragment as the main content.
+                    fragmentManager.beginTransaction()
+                            .add(R.id.container, new ForumCommentFragment()).commit();
                 }
             });
         }
@@ -125,11 +123,6 @@ public class ForumFragment extends Fragment {
             container.addView(view);
 
             ArrayList<String> myDataset = new ArrayList<>();
-
-            for (int i = 0; i < 100; i++) {
-                myDataset.add(Integer.toString(i));
-            }
-
             // https://blog.csdn.net/withiter/article/details/19908679
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
