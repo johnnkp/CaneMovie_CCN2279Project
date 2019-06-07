@@ -1,6 +1,7 @@
 package hkcc.ccn2279.gp.canemovie;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -17,6 +18,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import hkcc.ccn2279.gp.canemovie.xml.Discussion;
+import hkcc.ccn2279.gp.canemovie.xml.DomParseXML;
 
 public class ForumFragment extends Fragment {
     // https://givemepass.blogspot.com/2015/10/tablayout.html
@@ -126,6 +130,17 @@ public class ForumFragment extends Fragment {
                 myDataset.add(Integer.toString(i));
             }
 
+            // https://blog.csdn.net/withiter/article/details/19908679
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            List<Discussion> discussions = new ArrayList<Discussion>();
+            discussions = DomParseXML.getPost("https://raw.githubusercontent.com/johnnkp/CanemovieXMLDB_CCN2279Project/master/app/forum.xml");
+            System.out.println(discussions.size());
+            for (int count = 0; count < discussions.size(); count++) {
+                myDataset.add(discussions.get(count).getTitle());
+                System.out.println(discussions.get(count).getTitle());
+            }
+
             mAdapter = new MyAdapter(myDataset);
             mRecyclerView = (RecyclerView) getView().findViewById(R.id.forum_index_recyclerview);
             final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -134,6 +149,7 @@ public class ForumFragment extends Fragment {
             mRecyclerView.setAdapter(mAdapter);
             return view;
         }
+
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
