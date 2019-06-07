@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D8D8D8"
+        android:padding="@dimen/fab_margin"
+        android:text="@string/choose_cinema_title"
+        android:textColor="@color/textRed"
+        android:textSize="25sp"
+        app:fontFamily="@font/sf_pro_display_medium" />
+
+    <SearchView
+        android:id="@+id/search_cinema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_margin="15sp"
+        android:background="@drawable/search_grey"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_cinema">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/broadway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:padding="3sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_broadway" />
+
+            <ImageView
+                android:id="@+id/cgv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_cgv" />
+
+            <ImageView
+                android:id="@+id/chinachem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="5sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_chinachem_en" />
+
+            <ImageView
+                android:id="@+id/cinema_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_city" />
+
+            <ImageView
+                android:id="@+id/cityline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_cityline" />
+
+            <ImageView
+                android:id="@+id/emperor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="5sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_emperor" />
+
+            <ImageView
+                android:id="@+id/golden_harvest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_golden_harvest" />
+
+            <ImageView
+                android:id="@+id/mcl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_mcl" />
+
+            <ImageView
+                android:id="@+id/metroplex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_metroplex" />
+
+            <ImageView
+                android:id="@+id/newport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_newport" />
+
+            <ImageView
+                android:id="@+id/ua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_ua" />
+
+            <ImageView
+                android:id="@+id/lg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="10sp"
+                android:background="@drawable/search_borderline"
+                app:srcCompat="@drawable/cinema_lg" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

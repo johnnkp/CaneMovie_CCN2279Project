@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/movie_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_borderline"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="144sp"
+                android:layout_height="202.5sp"
+                android:layout_marginRight="@dimen/fab_margin"
+                app:srcCompat="@drawable/avengers_endgame" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imageView6"
+                android:text="戲名: 復仇者聯盟4: 終局之戰"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView4"
+                android:layout_toRightOf="@id/imageView6"
+                android:text="片長: 181分鐘"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView5"
+                android:layout_toRightOf="@id/imageView6"
+                android:text="級別: IIA"
+                android:textSize="22dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView6"
+                android:layout_toRightOf="@id/imageView6"
+                android:isIndicator="true"
+                android:rating="3" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/top_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_info"
+            android:layout_margin="15sp"
+            android:background="@drawable/buy_borderline"
+            android:onClick="ChooseCinemaActivity"
+            android:text="購買戲票\t→"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_buy" />
+
+        <Button
+            android:id="@+id/bottom_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerview"
+            android:layout_margin="15sp"
+            android:background="@drawable/buy_borderline"
+            android:onClick="ChooseCinemaActivity"
+            android:text="購買戲票\t→"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</ScrollView>

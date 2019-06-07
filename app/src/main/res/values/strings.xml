@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">傾Movie</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings"><u>設定</u></string>
+    <string name="settings">設定</string>
+    <string name="title_activity_toolbar">Toolbar</string>
+    <string name="title_home">主頁</string>
+    <string name="title_forum">討論區</string>
+    <string name="title_news">最新動態</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="search">搜尋</string>
+    <string name="privacy">私隱政策</string>
+    <string name="nav_privacy"><u>私隱政策</u></string>
+    <string name="help">幫助</string>
+    <string name="nav_help"><u>幫助</u></string>
+    <string name="how_to_buy">如何購買戲票？</string>
+    <string name="guide_1">1. 點擊你有興趣的電影</string>
+    <string name="guide_2">\n2. 點擊「購買戲票」</string>
+    <string name="guide_3">\n3. 選擇院線</string>
+    <string name="guide_4">\n4. 在院線網站選擇戲院丶場次丶座位，然後付款</string>
+    <string name="list_view">列表檢視</string>
+    <string name="poster_view">海報檢視</string>
+    <string name="basic_information">基本資料</string>
+    <string name="premise">電影大綱</string>
+    <string name="trailer">預告片</string>
+    <string name="related_movie">相關電影</string>
+
+    <string name="version">"版本"</string>
+    <string name="language_title">"語言"</string>
+    <string name="language_key" translatable="false">"language"</string>
+    <bool name="language_default" translatable="false">true</bool>
+    <string name="language_chinese" translatable="false">"中文"</string>
+    <string name="language_english" translatable="false">"English"</string>
+    <string name="text_size">"字形大小"</string>
+    <string name="button_size">"按鈕大小"</string>
+    <string name="reset">"恢復設定"</string>
+    <string name="reset_title">恢復預設設定</string>
+    <string name="reset_message">現有設定將會全部遺失!\n你要恢復預設設定嗎?</string>
+    <string name="no">否</string>
+    <string name="reset_button">重設</string>
+
+    <string name="title_theatre_info">戲院資料</string>
+    <string name="choose_cinema_title">選擇院線</string>
+
+    <string name="general_forum">觀眾討論區</string>
+    <string name="pro_forum">影評人討論區</string>
+    <string name="respond">回應</string>
+</resources>
